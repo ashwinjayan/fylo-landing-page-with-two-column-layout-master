@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$black: hsl(243, 87%, 12%);
+$grey: hsl(238, 22%, 44%);
+
+$blue: hsl(224, 93%, 58%);
+$cyan: hsl(170, 45%, 43%);
+
+$gray-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+
+.attribution {
+    font-size : 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
