@@ -10,6 +10,44 @@ $cyan: hsl(170, 45%, 43%);
 $gray-blue: hsl(240, 75%, 98%);
 $light-gray: hsl(0, 0%, 75%);
 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    padding: 0 6%;
+}
+
+.header {
+    height: 4em;
+    .logo {
+        display: inline-block;
+        background-image: url('../images/logo.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24%;
+        height: inherit;
+    }
+
+    .nav-items{
+        display: inline-table;
+        float: inline-end;
+        height: inherit;
+
+        ul {
+            list-style: none;
+            text-align: center;
+            li {
+                margin-left: 1em;
+                display: inline;
+                
+            }
+        }
+    }
+}
+
 .attribution {
     font-size : 11px;
     text-align: center;
