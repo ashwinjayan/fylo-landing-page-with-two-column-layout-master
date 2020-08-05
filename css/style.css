@@ -1,5 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  padding: 0 6%;
+}
+
+.header {
+  height: 4em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  background-image: url("../images/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6em;
+  height: 100%;
+}
+
+.header .nav-items {
+  font-size: 0.8em;
+  max-width: 50%;
+  width: 15em;
+  height: 100%;
+}
+
+.header .nav-items ul {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero .hero-img {
+  background-image: url("../images/illustration-1.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60vh;
+  width: 90%;
+  margin-bottom: 10vw;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
