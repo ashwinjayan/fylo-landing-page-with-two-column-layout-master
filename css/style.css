@@ -49,8 +49,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
 }
 
 .hero {
