@@ -55,7 +55,7 @@ body {
             list-style: none;
             display: flex;
             justify-content: space-between;
-            transform: translateX(-30%);
+            transform: translateX(-20%);
         }
     }
 }
@@ -75,6 +75,49 @@ body {
         width: 90%;
         margin-bottom: 10vw;
     }
+
+    .title {
+        font-family: $header-font;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        height: 8em;
+        width: 100%;
+        justify-content: space-evenly;
+
+        label {
+            display: none;
+        }
+
+        input {
+            padding: 1em;
+            font-family: $header-font;
+            color: $light-gray;
+            border: 1px solid rgba($color: #000000, $alpha: 0.4);
+            box-shadow: inset 0 0 1px;
+            border-radius: 4px;
+        }
+
+        input:focus-within {
+            color: $black;
+        }
+
+        button {
+            padding: 0.8em 0.5em;
+            background-color: $blue;
+            border: none;
+            color: $gray-blue;
+            font-family: $header-font;
+            font-weight: 700;
+            border-radius: 4px;
+        }
+    }
+}
+
+.mid-section {
+    
 }
 
 .attribution {
