@@ -234,8 +234,26 @@ body {
 .early-access {
   background-color: #585989;
   color: #f8f8fe;
-  padding: 0 6%;
+  padding: 15% 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+}
+
+.early-access .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .early-access .form {
@@ -269,7 +287,7 @@ body {
 }
 
 .early-access .form button {
-  padding: 0.8em 0.5em;
+  padding: 0.9em 0.5em;
   background-color: #3065f8;
   border: none;
   color: #f8f8fe;
@@ -279,12 +297,68 @@ body {
           box-shadow: 0 0 3px rgba(7, 4, 57, 0.2);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+footer {
+  background-color: #070439;
+  color: #bfbfbf;
+  padding: 15% 6%;
 }
 
-.attribution a {
+footer .logo {
+  background-image: url("../images/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60%;
+  mix-blend-mode: screen;
+}
+
+footer .links ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 4em;
+}
+
+footer .links ul li {
+  margin-bottom: 1em;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .socials .icon {
+  margin-right: 1.5em;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #bfbfbf;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 0;
+}
+
+footer .attribution a {
   color: #3e52a3;
 }
 /*# sourceMappingURL=style.css.map */
