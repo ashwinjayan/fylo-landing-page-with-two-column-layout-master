@@ -10,8 +10,7 @@ body {
 
 .header {
   padding: 0 6%;
-  height: 4em;
-  width: 88%;
+  height: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +35,7 @@ body {
   font-size: 0.8em;
   max-width: 50%;
   width: 15em;
-  height: 100%;
+  margin: auto 0;
 }
 
 .header .nav-items ul {
@@ -45,11 +44,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 8em;
+  }
+  .header .logo {
+    width: 8em;
+  }
 }
 
 .hero {
@@ -58,17 +67,15 @@ body {
   display: grid;
   justify-items: center;
   text-align: center;
-  width: 88%;
 }
 
 .hero .hero-img {
-  background-image: url("../images/illustration-1.svg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 60vh;
-  width: 90%;
-  margin-bottom: 10vw;
+  width: 100%;
+  margin: 10vw auto;
+}
+
+.hero .hero-img img {
+  width: 100%;
 }
 
 .hero .title {
@@ -118,6 +125,64 @@ body {
   border-radius: 4px;
 }
 
+@media only screen and (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    -ms-grid-columns: 45% 50%;
+        grid-template-columns: 45% 50%;
+    -ms-grid-rows: 1fr 20% 1fr;
+        grid-template-rows: 1fr 20% 1fr;
+        grid-template-areas: "content image" "content image" "content image";
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero .hero-img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: image;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .hero .title,
+  .hero .subtitle,
+  .hero .form {
+    grid-area: "content";
+    text-align: left;
+  }
+  .hero .title {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .hero .form {
+    justify-self: flex-start;
+    width: 80%;
+    margin-top: 5%;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 3em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero .form input {
+    width: 50%;
+  }
+  .hero .form button {
+    width: 40%;
+  }
+}
+
 .curve-img {
   padding: 0;
   padding-top: 5em;
@@ -134,9 +199,6 @@ body {
 .mid-section {
   background-color: #f8f8fe;
   padding: 0 6%;
-  padding-top: 5em;
-  margin-top: 0;
-  width: 88%;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -144,13 +206,12 @@ body {
 }
 
 .mid-section .section-img {
-  background-image: url("../images/illustration-2.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 60vh;
   width: 100%;
   padding-bottom: 4em;
+}
+
+.mid-section .section-img img {
+  width: 100%;
 }
 
 .mid-section .section-header {
@@ -231,6 +292,49 @@ body {
   font-size: 0.55em;
 }
 
+@media only screen and (min-width: 768px) {
+  .mid-section {
+    min-height: 100vh;
+    -ms-grid-columns: 45% 50%;
+        grid-template-columns: 45% 50%;
+    -ms-grid-rows: 20% 40% 5% 35%;
+        grid-template-rows: 20% 40% 5% 35%;
+        grid-template-areas: "content image" "content image" "content image" "content image";
+    text-align: left;
+    justify-items: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mid-section .section-header,
+  .mid-section .section-content,
+  .mid-section .section-link,
+  .mid-section .card {
+    grid-area: "content";
+  }
+  .mid-section .section-header {
+    font-size: 1.6em;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .mid-section .section-img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 2;
+    grid-area: image;
+    width: 90%;
+    margin: auto;
+  }
+  .mid-section .section-link,
+  .mid-section .card {
+    margin-top: 0;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
 .early-access {
   background-color: #585989;
   color: #f8f8fe;
@@ -242,10 +346,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
-.early-access .header {
+.early-access .content > h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,6 +361,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 700;
+  font-family: "Raleway", sans-serif;
 }
 
 .early-access .form {
@@ -265,7 +374,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 8em;
-  width: 100%;
+  width: 80%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -280,6 +389,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #bfbfbf;
   border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
 }
 
 .early-access .form input:focus-within {
@@ -287,6 +397,7 @@ body {
 }
 
 .early-access .form button {
+  border-radius: 3px;
   padding: 0.9em 0.5em;
   background-color: #3065f8;
   border: none;
@@ -297,19 +408,63 @@ body {
           box-shadow: 0 0 3px rgba(7, 4, 57, 0.2);
 }
 
+@media only screen and (min-width: 768px) {
+  .early-access {
+    min-height: 20vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 5% 6%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .early-access .content {
+    text-align: left;
+    max-width: 40%;
+  }
+  .early-access .content h3 {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    font-size: 1.6em;
+  }
+  .early-access .form {
+    width: 40%;
+  }
+  .early-access .form button {
+    width: 50%;
+  }
+}
+
 footer {
   background-color: #070439;
   color: #bfbfbf;
   padding: 15% 6%;
+  padding-bottom: 0;
 }
 
 footer .logo {
-  background-image: url("../images/logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 60%;
-  mix-blend-mode: screen;
+  height: 4em;
+}
+
+footer .phone,
+footer .email {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 90%;
+      grid-template-columns: 10% 90%;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  justify-items: left;
+  margin-top: 1em;
+}
+
+footer .phone img,
+footer .email img {
+  margin-top: 0.4em;
 }
 
 footer .links ul {
