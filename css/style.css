@@ -516,4 +516,55 @@ footer .attribution {
 footer .attribution a {
   color: #3e52a3;
 }
+
+@media only screen and (min-width: 768px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    padding: 5% 6%;
+        grid-template-areas: "logo logo logo" "contact links socials";
+    -ms-grid-columns: 30% 40% 30%;
+        grid-template-columns: 30% 40% 30%;
+  }
+  footer .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: logo;
+  }
+  footer .contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+  footer .links {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: links;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .links ul {
+    margin: 0;
+  }
+  footer .socials {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: socials;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  footer .attribution {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: socials;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
 /*# sourceMappingURL=style.css.map */
