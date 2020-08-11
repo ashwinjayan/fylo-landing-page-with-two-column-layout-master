@@ -62,7 +62,7 @@ body {
 }
 
 .hero {
-  padding: 0 6%;
+  padding: 5% 6%;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -197,7 +197,7 @@ body {
 
 .mid-section {
   background-color: #f8f8fe;
-  padding: 0 6%;
+  padding: 5% 6%;
   display: -ms-grid;
   display: grid;
   justify-items: center;
