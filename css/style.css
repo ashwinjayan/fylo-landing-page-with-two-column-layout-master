@@ -127,7 +127,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    min-height: 80%;
     -ms-grid-columns: 45% 50%;
         grid-template-columns: 45% 50%;
     -ms-grid-rows: 1fr 20% 1fr;
@@ -294,7 +293,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .mid-section {
-    min-height: 100%;
     -ms-grid-columns: 45% 50%;
         grid-template-columns: 45% 50%;
     -ms-grid-rows: 20% 40% 5% 35%;
@@ -410,7 +408,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .early-access {
-    min-height: 20%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
