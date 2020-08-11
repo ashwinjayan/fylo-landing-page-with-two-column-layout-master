@@ -127,7 +127,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    min-height: 70%;
+    min-height: 80%;
     -ms-grid-columns: 45% 50%;
         grid-template-columns: 45% 50%;
     -ms-grid-rows: 1fr 20% 1fr;
