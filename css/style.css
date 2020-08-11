@@ -324,13 +324,6 @@ body {
     width: 90%;
     margin: auto;
   }
-  .mid-section .section-link,
-  .mid-section .card {
-    margin-top: 2em;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
-  }
 }
 
 .early-access {
